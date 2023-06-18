@@ -1,12 +1,18 @@
 import React from 'react'
-import App from '../App.css'
+import{Link} from 'react-router-dom'
 
     
 function Header() {
   return (
-    <div>
+    <>
       <nav>Complete Your Daily Tasks.</nav>
-    </div>
+      <div className='header'>
+        <Link to='/'>Home</Link>
+        <Link to='/about'>About</Link>
+        <Link to='/contact'>Contact</Link>
+        <Link to='/user/tempid'>User</Link>
+      </div>
+    </>
   )
 }
 

@@ -1,14 +1,25 @@
 import React from 'react'
 import Header from './Components/Header'
 import Home from './Components/Home'
-import Tasks from './Components/Tasks'
+import { BrowserRouter ,Route, Routes} from 'react-router-dom'
+import Contact from './Components/Contact'
+import About from './Components/About'
+import Footer from './Components/Footer'
+import User from './Components/User'
+
 
 function App() {
   return (
-    <div>
-      <Header/>
-      <Home/>
-    </div>
+   <BrowserRouter>
+    <Header/>
+    <Routes>
+    <Route path='/' element={<Home/>}/> 
+      <Route path='/contact' element={<Contact/>}/> 
+      <Route path='/about' element={<About/>}/> 
+      <Route path='/user/:id' element={<User/>}/> 
+    </Routes>
+    <Footer/>
+   </BrowserRouter>
   )
 }
 
